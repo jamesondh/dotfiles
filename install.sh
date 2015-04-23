@@ -36,8 +36,11 @@ fi
 # vim
 if [[ $1 = "all" ]] || [[ $1 = "vim" ]] ; then
     echo -e "${cyan}setting up vim...${NC}"
-    cp -vr ./.vim ~
-    cp -v ./.vimrc ~
+    if [ ! -d ~/.vim ]; then
+        mkdir ~/.vim
+    fi
+    cp -vr ./vim/* ~/.vim/
+    cp -v ./vimrc ~/.vimrc
     if [[ ! $1 = "all" ]] ; then
         echo -e "${cyan}done installing!${NC}"
         exit 1
@@ -47,7 +50,7 @@ fi
 # mg
 if [[ $1 = "all" ]] || [[ $1 = "mg" ]] ; then
     echo -e "${cyan}setting up mg...${NC}"
-    cp -v ./.mg ~
+    cp -v ./mg ~/.mg
     if [[ ! $1 = "all" ]] ; then
         echo -e "${cyan}done installing!${NC}"
         exit 1
