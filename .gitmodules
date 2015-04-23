@@ -1,0 +1,3 @@
+[submodule "subl-preferences"]
+	path = subl-preferences
+	url = git@github.com:jamesondh/subl-preferences
