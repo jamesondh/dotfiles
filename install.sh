@@ -37,6 +37,7 @@ fi
 if [[ $1 = "all" ]] || [[ $1 = "vim" ]] ; then
     echo -e "${cyan}setting up vim...${NC}"
     cp -vr ./.vim ~
+    cp -v ./.vimrc ~
     if [[ ! $1 = "all" ]] ; then
         echo -e "${cyan}done installing!${NC}"
         exit 1
