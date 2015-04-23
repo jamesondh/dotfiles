@@ -1,3 +1,5 @@
+" jamesondh .vimrc config
+
 " General
 set number
 set showmatch
@@ -31,4 +33,3 @@ function TabToggle()
   endif
 endfunction
 nmap <F3> mz:execute TabToggle()<CR>'z
-
