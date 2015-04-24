@@ -67,3 +67,4 @@ fi
 
 # if $1 is not the list, echo help
 echo -e "${cyan}usage: ./install {all, subl, vim, mg}${NC}"
+echo -e "${cyan}note: subl-icons will not install if \"all\" argument is passed${NC}"
