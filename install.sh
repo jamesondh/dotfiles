@@ -4,7 +4,7 @@ NC='\033[0m'
 
 # no arguments? echo help
 if [[ -z $1 ]] ; then
-    echo -e "${cyan}usage: ./install {all, subl, subl-icons, vim, mg}${NC}"
+    echo -e "${cyan}usage: ./install {all, subl, subl-icons, vim, emacs, mg}${NC}"
     echo -e "${cyan}note: subl-icons will not install if \"all\" argument is passed${NC}"
     exit 0
 fi
@@ -47,6 +47,19 @@ if [[ $1 = "all" ]] || [[ $1 = "vim" ]] ; then
     fi
 fi
 
+# emacs
+if [[ $1 = "all" ]] || [[ $1 = "emacs" ]] ; then
+    echo -e "${cyan}setting up emacs...${NC}"
+    if [ ! -d ~/.emacs.d ]; then
+        mkdir ~/.emacs.d
+    fi
+    cp -v ./emacs.d/init.el ~/.emacs.d/
+    if [[ ! $1 = "all" ]] ; then
+        echo -e "${cyan}done installing!${NC}"
+        exit 1
+    fi
+fi
+
 # mg
 if [[ $1 = "all" ]] || [[ $1 = "mg" ]] ; then
     echo -e "${cyan}setting up mg...${NC}"
@@ -66,5 +79,5 @@ if [[ $1 = "all" ]] ; then
 fi
 
 # if $1 is not the list, echo help
-echo -e "${cyan}usage: ./install {all, subl, vim, mg}${NC}"
+echo -e "${cyan}usage: ./install {all, subl, subl-icons, vim, emacs, mg}${NC}"
 echo -e "${cyan}note: subl-icons will not install if \"all\" argument is passed${NC}"
