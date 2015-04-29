@@ -16,6 +16,10 @@ set incsearch
 set nobackup
 set nowritebackup
 
+" Put vim into insert mode upon start
+set insertmode
+set selectmode += cmd
+
 " Virtual tabstops using spaces
 set shiftwidth=4
 set softtabstop=4
