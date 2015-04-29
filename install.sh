@@ -14,8 +14,8 @@ fi
 # sublime text 3
 if [[ $1 = "all" ]] || [[ $1 = "subl" ]] ; then
     echo -e "${cyan}setting up sublime text 3...${NC}"
-    cp -v ./subl-preferences/Preferences.sublime-settings ~/.config/sublime-text-3/Packages/User/
-    cp -v ./subl-preferences/Default\ \(Linux\).sublime-keymap ~/.config/sublime-text-3/Packages/User/
+    cp -v ./subl/Preferences.sublime-settings ~/.config/sublime-text-3/Packages/User/
+    cp -v ./subl/Default\ \(Linux\).sublime-keymap ~/.config/sublime-text-3/Packages/User/
     if [[ ! $1 = "all" ]] ; then
         echo -e "${cyan}done installing!${NC}"
         exit 1
@@ -26,7 +26,7 @@ fi
 if [[ $1 = "subl-icons" ]] ; then
     echo -e "${cyan}replacing sublime text 3 icons...${NC}"
     sudo mv -v /opt/sublime_text_3/Icon/ /opt/sublime_text_3/Icon-backup/
-    sudo cp -vr ./subl-preferences/Icon/ /opt/sublime_text_3/Icon/
+    sudo cp -vr ./subl/Icon/ /opt/sublime_text_3/Icon/
     if [[ ! $1 = "all" ]] ; then
         echo -e "${cyan}done installing!${NC}"
         exit 1
