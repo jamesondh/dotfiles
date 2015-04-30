@@ -63,7 +63,7 @@ fi
 if [[ $1 = "vim" ]] ; then
     warning
     echo -e "${cyan}setting up vim...${NC}"
-    ln -frvs ./vim/ ~/.vim
+    ln -frvs ./vim ~/.vim
     ln -frvs ./vimrc ~/.vimrc
     quit
 fi
