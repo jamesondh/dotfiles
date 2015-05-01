@@ -2,10 +2,12 @@
 
 # This script is released to the public domain and contains NO WARRANTY.
 
+# terminal colors
 cyan='\033[0;36m'
 orange='\033[0;33m'
 NC='\033[0m'
 
+# functions so we're not repeating ourselves
 function help {
     echo -e "${cyan}usage: ./install {emacs, mg, subl, subl-icons, vim}${NC}"
 }
