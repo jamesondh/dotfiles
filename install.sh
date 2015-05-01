@@ -1,4 +1,7 @@
 #!/bin/bash
+
+# This script is released to the public domain and contains NO WARRANTY.
+
 cyan='\033[0;36m'
 orange='\033[0;33m'
 NC='\033[0m'
