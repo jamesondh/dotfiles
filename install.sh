@@ -9,7 +9,7 @@ NC='\033[0m'
 
 # functions so we're not repeating ourselves
 function help {
-    echo -e "${cyan}usage: ./install {emacs, mg, subl, subl-icons, vim}${NC}"
+    echo -e "${cyan}usage: ./install {emacs, mg, subl, subl-icons, tmux, vim}${NC}"
 }
 function warning {
     echo -e "${orange}WARNING: This will overwrite any current configuration files. Press [ENTER]"
@@ -47,6 +47,12 @@ case "$1" in
     echo -e "${cyan}replacing sublime text 3 icons...${NC}"
     sudo mv -vf /opt/sublime_text_3/Icon/ /opt/sublime_text_3/Icon-backup/
     sudo cp -vfr ./subl/Icon/ /opt/sublime_text_3/Icon/
+    quit
+    ;;
+'tmux')
+    warning
+    echo -e "${cyan}setting up tmux...${NC}"
+    cp -vf ./tmux-conf ~/.tmux-conf
     quit
     ;;
 'vim')
