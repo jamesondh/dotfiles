@@ -33,7 +33,7 @@ fi
 if [[ $1 = "emacs" ]] ; then
     warning
     echo -e "${cyan}setting up emacs...${NC}"
-    ln -frvs ./prelude/ ~/.emacs.d
+    cp -vfr ./prelude/ ~/.emacs.d
     quit
 fi
 
@@ -42,7 +42,7 @@ fi
 if [[ $1 = "mg" ]] ; then
     warning
     echo -e "${cyan}setting up mg...${NC}"
-    ln -frvs ./mg ~/.mg
+    cp -vf ./mg ~/.mg
     quit
 fi
 
@@ -50,8 +50,8 @@ fi
 if [[ $1 = "subl" ]] ; then
     warning
     echo -e "${cyan}setting up sublime text 3...${NC}"
-    ln -frvs ./subl/Preferences.sublime-settings ~/.config/sublime-text-3/Packages/User/
-    ln -frvs ./subl/Default\ \(Linux\).sublime-keymap ~/.config/sublime-text-3/Packages/User/
+    cp -vf ./subl/Preferences.sublime-settings ~/.config/sublime-text-3/Packages/User/
+    cp -vf ./subl/Default\ \(Linux\).sublime-keymap ~/.config/sublime-text-3/Packages/User//User/
     quit
 fi
 
@@ -59,8 +59,8 @@ fi
 if [[ $1 = "subl-icons" ]] ; then
     warning
     echo -e "${cyan}replacing sublime text 3 icons...${NC}"
-    sudo mv -v /opt/sublime_text_3/Icon/ /opt/sublime_text_3/Icon-backup/
-    sudo cp -vr ./subl/Icon/ /opt/sublime_text_3/Icon/
+    sudo mv -vf /opt/sublime_text_3/Icon/ /opt/sublime_text_3/Icon-backup/
+    sudo cp -vfr ./subl/Icon/ /opt/sublime_text_3/Icon/
     quit
 fi
 
@@ -68,8 +68,8 @@ fi
 if [[ $1 = "vim" ]] ; then
     warning
     echo -e "${cyan}setting up vim...${NC}"
-    ln -frvs ./vim ~/.vim
-    ln -frvs ./vimrc ~/.vimrc
+    cp -vfr ./vim/* ~/.vim/
+    cp -vf ./vimrc ~/.vimrc
     quit
 fi
 
