@@ -33,7 +33,7 @@ fi
 if [[ $1 = "emacs" ]] ; then
     warning
     echo -e "${cyan}setting up emacs...${NC}"
-    cp -vfr ./prelude/ ~/.emacs.d
+    cp -vfr ./prelude/* ~/.emacs.d
     quit
 fi
 
