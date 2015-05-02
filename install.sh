@@ -21,59 +21,42 @@ function quit {
     exit 1
 }
 
-# no arguments? echo help
-if [[ -z $1 ]] ; then
-    help
-    exit 0
-fi
-
-
-
-# emacs
-if [[ $1 = "emacs" ]] ; then
+# let's start!
+case "$1" in
+'emacs')
     warning
     echo -e "${cyan}setting up emacs...${NC}"
     cp -vfr ./prelude/* ~/.emacs.d
     quit
-fi
-
-
-# mg
-if [[ $1 = "mg" ]] ; then
+    ;;
+'mg')
     warning
     echo -e "${cyan}setting up mg...${NC}"
     cp -vf ./mg ~/.mg
     quit
-fi
-
-# sublime text 3
-if [[ $1 = "subl" ]] ; then
+    ;;
+'subl')
     warning
     echo -e "${cyan}setting up sublime text 3...${NC}"
     cp -vf ./subl/Preferences.sublime-settings ~/.config/sublime-text-3/Packages/User/
     cp -vf ./subl/Default\ \(Linux\).sublime-keymap ~/.config/sublime-text-3/Packages/User//User/
     quit
-fi
-
-# sublime text 3 icons
-if [[ $1 = "subl-icons" ]] ; then
+    ;;
+'subl-icons')
     warning
     echo -e "${cyan}replacing sublime text 3 icons...${NC}"
     sudo mv -vf /opt/sublime_text_3/Icon/ /opt/sublime_text_3/Icon-backup/
     sudo cp -vfr ./subl/Icon/ /opt/sublime_text_3/Icon/
     quit
-fi
-
-# vim
-if [[ $1 = "vim" ]] ; then
+    ;;
+'vim')
     warning
     echo -e "${cyan}setting up vim...${NC}"
     cp -vfr ./vim/* ~/.vim/
     cp -vf ./vimrc ~/.vimrc
     quit
-fi
-
-
-
-# wrong arguments? echo help
-help
+    ;;
+*)
+    help
+    ;;
+esac
