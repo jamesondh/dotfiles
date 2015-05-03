@@ -1,6 +1,3 @@
-[submodule "subl"]
-	path = subl
-	url = https://github.com/jamesondh/subl
 [submodule "prelude"]
 	path = prelude
 	url = https://github.com/jamesondh/prelude
