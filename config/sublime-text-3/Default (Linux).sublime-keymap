@@ -1,0 +1,20 @@
+[
+
+	// Emacs-style movement keys
+	{ "keys": ["ctrl+b"], "command": "move", "args": {"by": "characters", "forward": false} },
+	{ "keys": ["ctrl+f"], "command": "move", "args": {"by": "characters", "forward": true} },
+	{ "keys": ["ctrl+p"], "command": "move", "args": {"by": "lines", "forward": false} },
+	{ "keys": ["ctrl+n"], "command": "move", "args": {"by": "lines", "forward": true} },
+	{ "keys": ["ctrl+a"], "command": "move_to", "args": {"to": "bol", "extend": false} },
+	{ "keys": ["ctrl+e"], "command": "move_to", "args": {"to": "eol", "extend": false} },
+	{ "keys": ["alt+b"], "command": "move", "args": {"by": "words", "forward": false} },
+	{ "keys": ["alt+f"], "command": "move", "args": {"by": "word_ends", "forward": true} },
+
+	// Remap important functions that I replaced :-)
+	{ "keys": ["ctrl+shift+f"], "command": "show_panel", "args": {"panel": "find", "reverse": false} },
+	{ "keys": ["ctrl+shift+a"], "command": "select_all" },
+
+	// Dired mode
+	{ "keys": ["ctrl+o"], "command": "dired" },
+
+]
