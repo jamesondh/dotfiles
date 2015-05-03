@@ -1,6 +1,3 @@
-subl-preferences
-================
-My attempt to make Sublime Text slightly more Emacs-like while keeping it lightweight.
 ### Packages:
 + Package Control
 + Theme - Spacegray
