@@ -1,6 +1,4 @@
-# .vim
-Plugins:
-* Vimacs
-* NERDTree
-* TabIndent
-* Auto Pairs
+### Plugins:
++ NERDTree
++ TabIndent
++ Auto Pairs
