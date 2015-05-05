@@ -10,7 +10,7 @@ fi
 if [ ! -d ~/.config/sublime-text-3/Packages]; then
     mkdir ~/.config/sublime-text-3/Packages
 fi
-if [ ! -d ~/.config/User]; then
+if [ ! -d ~/.config/sublime-text-3/Packages/User]; then
     mkdir ~/.config/sublime-text-3/Packages/User
 fi
 
