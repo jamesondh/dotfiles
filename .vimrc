@@ -43,6 +43,10 @@ set listchars=eol:¬,tab:▸\ ,extends:#,trail:·
 highlight SpecialKey ctermfg=8
 nmap <leader>l :set list!<CR>
 
+" Shift line up and down
+noremap <c-s-up> :call feedkeys( line('.')==1 ? '' : 'ddkP'  )<CR>
+noremap <c-s-down> ddp
+
 " Map tab settings
 nmap <leader>2 :set tabstop=2 shiftwidth=2 expandtab<CR>
 nmap <leader>4 :set tabstop=4 shiftwidth=4 expandtab<CR>
