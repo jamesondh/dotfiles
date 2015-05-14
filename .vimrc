@@ -17,6 +17,7 @@ set shiftwidth=4
 set autoindent
 set copyindent
 set smarttab
+filetype plugin indent on
 
 " Theme
 set t_Co=256
