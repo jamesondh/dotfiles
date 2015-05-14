@@ -3,6 +3,7 @@
 " General
 set nocompatible
 set encoding=utf8
+execute pathogen#infect()
 set nowrap
 set backspace=indent,eol,start
 set number
@@ -16,7 +17,6 @@ set shiftwidth=4
 set autoindent
 set copyindent
 set smarttab
-let g:indentLine_char = '︙'
 
 " Theme
 set t_Co=256
