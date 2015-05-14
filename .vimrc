@@ -1,35 +1,46 @@
 " jamesondh .vimrc config
 
 " General
+set nocompatible
+set encoding=utf8
+set nowrap
+set backspace=indent,eol,start
 set number
 set showmatch
 set visualbell
-set encoding=utf8
+set noerrorbells
+set title
+
+" Indentation
+set shiftwidth=4
+set autoindent
+set copyindent
+set smarttab
+let g:indentLine_char = '︙'
+
+" Theme
+set t_Co=256
 syntax enable
+colorscheme mirodark
 
 " Search
 set hlsearch
 set smartcase
 set incsearch
+set ignorecase
 
-" Backups
+" Backups & history
+set history=1000
+set undolevels=1000
 set nobackup
 set nowritebackup
 
-" Virtual tabstops using spaces
-set shiftwidth=4
-set softtabstop=4
-set expandtab
-" Allow toggling between local and default mode
-function TabToggle()
-  if &expandtab
-    set shiftwidth=8
-    set softtabstop=0
-    set noexpandtab
-  else
-    set shiftwidth=4
-    set softtabstop=4
-    set expandtab
-  endif
-endfunction
-nmap <F3> mz:execute TabToggle()<CR>'z
+" Highlight tabs, spaces, and EOL characters
+set listchars=eol:¬,tab:▸\ ,extends:#,trail:·
+highlight SpecialKey ctermfg=8
+nmap <leader>l :set list!<CR>
+
+" Map tab settings
+nmap <leader>2 :set tabstop=2 shiftwidth=2 expandtab<CR>
+nmap <leader>4 :set tabstop=4 shiftwidth=4 expandtab<CR>
+nmap <leader>8 :set tabstop=8 shiftwidth=8 noexpandtab<CR>
