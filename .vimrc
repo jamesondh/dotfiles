@@ -22,6 +22,7 @@ set smarttab
 set t_Co=256
 syntax enable
 colorscheme mirodark
+let g:airline_powerline_fonts = 1
 
 " Search
 set hlsearch
