@@ -139,5 +139,10 @@ layers configuration."
   (setq powerline-default-separator 'arrow)
 )
 
+(defun nuke-all-buffers ()
+  (interactive)
+  (mapcar 'kill-buffer (buffer-list))
+  (delete-other-windows))
+
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
