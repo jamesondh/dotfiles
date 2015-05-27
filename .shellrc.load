@@ -11,3 +11,5 @@ alias e=emacsclient -t
 alias tmux='tmux -2'
 alias agi='sudo apt-get install'
 alias agr='sudo apt-get remove'
+alias yi='sudo yum install'
+alias yr='sudo yum remove'
