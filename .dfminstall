@@ -1,4 +1,2 @@
 bin skip
 .gitmodules skip
-.sublime-text-3 skip
-.sublime-text-3/setup.sh exec
