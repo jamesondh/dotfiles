@@ -23,8 +23,6 @@ filetype plugin indent on
 set t_Co=256
 syntax enable
 colorscheme mirodark
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#bufferline#enabled = 1
 
 " Search
 set hlsearch
