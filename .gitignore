@@ -1,4 +1,4 @@
-.vim/bundle/**
+.vim/bundle/*
 !.vim/bundle/.gitkeep
 
 [._]*.s[a-w][a-z]
