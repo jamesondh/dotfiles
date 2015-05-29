@@ -1,2 +1,3 @@
 bin skip
 .gitmodules skip
+exec .vim/install-bundles.sh
