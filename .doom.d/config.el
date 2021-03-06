@@ -74,8 +74,8 @@
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/nextcloud/org/")
-(setq org-roam-directory "~/nextcloud/roam/")
+(setq org-directory "~/.org-server/org/")
+(setq org-roam-directory "~/.org-server/roam/")
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
