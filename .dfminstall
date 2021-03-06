@@ -1,3 +1,0 @@
-bin skip
-.gitmodules skip
-.vim/install-bundles.sh exec 
