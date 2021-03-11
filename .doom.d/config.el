@@ -68,9 +68,18 @@
   (next-line arg))
 (global-set-key (kbd "C-d") 'duplicate-line)
 
-;; CUSTOM - vterm
+;; CUSTOM - misc keybindings
 (global-set-key (kbd "C-c 1") 'vterm)
 (global-set-key (kbd "C-c 2") 'treemacs)
+
+;; CUSTOM - avy
+(global-set-key (kbd "C-:") 'avy-goto-char)
+(global-set-key (kbd "C-'") 'avy-goto-char-2)
+(global-set-key (kbd "M-g f") 'avy-goto-line)
+(global-set-key (kbd "M-g w") 'avy-goto-word-1)
+(global-set-key (kbd "M-g e") 'avy-goto-word-0)
+(avy-setup-default)
+(global-set-key (kbd "C-c C-j") 'avy-resume)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
