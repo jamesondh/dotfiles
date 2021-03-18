@@ -74,7 +74,7 @@
 
 ;; CUSTOM - avy
 (global-set-key (kbd "C-:") 'avy-goto-char)
-(setq avy-timeout-seconds 1)
+(setq avy-timeout-seconds 0.7)
 (global-set-key (kbd "C-'") 'avy-goto-char-timer)
 (global-set-key (kbd "M-g f") 'avy-goto-line)
 (global-set-key (kbd "M-g w") 'avy-goto-word-1)
