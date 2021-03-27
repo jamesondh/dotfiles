@@ -66,7 +66,7 @@
 
   ;; put the point in the lowest line and return
   (next-line arg))
-(global-set-key (kbd "C-d") 'duplicate-line)
+(global-set-key (kbd "C-D") 'duplicate-line)
 
 ;; CUSTOM - misc keybindings
 (global-set-key (kbd "C-c 1") 'vterm)
@@ -81,6 +81,24 @@
 (global-set-key (kbd "M-g e") 'avy-goto-word-0)
 (avy-setup-default)
 (global-set-key (kbd "C-c C-j") 'avy-resume)
+
+;; keep isearch result closer to center of window
+;; https://emacs.stackexchange.com/a/10432
+(defadvice isearch-update (before my-isearch-update activate)
+  (sit-for 0)
+  (if (and
+       ;; not the scrolling command
+       (not (eq this-command 'isearch-other-control-char))
+       ;; not the empty string
+       (> (length isearch-string) 0)
+       ;; not the first key (to lazy highlight all matches w/o recenter)
+       (> (length isearch-cmds) 2)
+       ;; the point in within the given window boundaries
+       (let ((line (count-screen-lines (point) (window-start))))
+         (or (> line (* (/ (window-height) 4) 3))
+             (< line (* (/ (window-height) 9) 1)))))
+      (let ((recenter-position 0.3))
+        (recenter '(4)))))
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
