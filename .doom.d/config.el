@@ -66,7 +66,7 @@
 
   ;; put the point in the lowest line and return
   (next-line arg))
-(global-set-key (kbd "C-D") 'duplicate-line)
+(global-set-key (kbd "C-c d") 'duplicate-line)
 
 ;; CUSTOM - misc keybindings
 (global-set-key (kbd "C-c 1") 'vterm)
