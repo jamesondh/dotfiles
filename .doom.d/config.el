@@ -18,7 +18,7 @@
  doom-font (font-spec :family "Iosevka" :size 14)
  doom-variable-pitch-font (font-spec :family "Iosevka Aile" :size 14)
  doom-big-font (font-spec :family "Iosevka Aile" :size 14)
- projectile-project-search-path '("~/code/")
+ projectile-project-search-path '("~/Documents/")
  js-indent-level 2
  typescript-indent-level 2
 )
