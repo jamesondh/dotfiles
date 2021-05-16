@@ -82,6 +82,9 @@
 (avy-setup-default)
 (global-set-key (kbd "C-c C-j") 'avy-resume)
 
+;; CUSTOM - turn off auto indent for web mode
+(setq web-mode-enable-auto-indentation nil)
+
 ;; keep isearch result closer to center of window
 ;; https://emacs.stackexchange.com/a/10432
 (defadvice isearch-update (before my-isearch-update activate)
