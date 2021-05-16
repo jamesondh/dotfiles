@@ -85,6 +85,10 @@
 ;; CUSTOM - turn off auto indent for web mode
 (setq web-mode-enable-auto-indentation nil)
 
+;; scroll lines
+(global-set-key (kbd "M-p") 'scroll-down-line)
+(global-set-key (kbd "M-n") 'scroll-up-line)
+
 ;; keep isearch result closer to center of window
 ;; https://emacs.stackexchange.com/a/10432
 (defadvice isearch-update (before my-isearch-update activate)
