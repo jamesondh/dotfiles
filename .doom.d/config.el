@@ -75,6 +75,10 @@
       (let ((recenter-position 0.3))
         (recenter '(4)))))
 
+;; add cargo to path
+(setenv "PATH" (concat (getenv "PATH") ":" (expand-file-name "~/.cargo/bin")))
+(setq exec-path (append exec-path (list (expand-file-name "~/.cargo/bin"))))
+
 ;; keybindings
 (global-set-key (kbd "C-c d") 'duplicate-line)
 (global-set-key (kbd "C-c 1") 'vterm)
