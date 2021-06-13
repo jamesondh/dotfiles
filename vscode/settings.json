@@ -1,0 +1,14 @@
+{
+    "editor.fontFamily": "'Iosevka', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontSize": 16,
+    "workbench.colorTheme": "One Dark Pro",
+    "editor.find.seedSearchStringFromSelection": false,
+    "workbench.colorCustomizations": {
+        "editor.background": "#000000",
+        "tab.activeBackground": "#000000",
+        "activityBar.background": "#000000",
+        "sideBar.background": "#000000",
+        "terminal.background": "#000000"
+    },
+    "editor.mouseWheelScrollSensitivity": -1 // natural scrolling
+}
