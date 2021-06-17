@@ -80,4 +80,56 @@
         "command": "-workbench.action.terminal.toggleFindWholeWord",
         "when": "terminalFindFocused && terminalProcessSupported || terminalFocus && terminalProcessSupported"
     },
+    {
+        "key": "ctrl+shift+alt+'",
+        "command": "editor.action.triggerParameterHints",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+'",
+        "command": "-editor.action.triggerParameterHints",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+'",
+        "command": "editor.action.triggerSuggest",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+'",
+        "command": "-editor.action.triggerSuggest",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+'",
+        "command": "toggleSuggestionDetails",
+        "when": "editorTextFocus && suggestWidgetVisible"
+    },
+    {
+        "key": "ctrl+'",
+        "command": "-toggleSuggestionDetails",
+        "when": "editorTextFocus && suggestWidgetVisible"
+    },
+    {
+        "key": "ctrl+'",
+        "command": "findJump.activate"
+    },
+    {
+        "key": "ctrl+x ctrl+shift+f",
+        "command": "workbench.action.files.openFolder"
+    },
+    {
+        "key": "ctrl+k ctrl+o",
+        "command": "-workbench.action.files.openFolder"
+    },
+    {
+        "key": "ctrl+x ctrl+shift+f",
+        "command": "workbench.action.files.openLocalFolder",
+        "when": "remoteFileDialogVisible"
+    },
+    {
+        "key": "ctrl+k ctrl+o",
+        "command": "-workbench.action.files.openLocalFolder",
+        "when": "remoteFileDialogVisible"
+    },
 ]
